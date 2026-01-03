@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy It - E Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🔵 FLIPKART STYLE HEADER -->
+<header class="fk-header">
+    <div class="logo">BuyIt</div>
+
+    
+
+    <nav class="fk-nav">
+        <a href="index.html" >Home</a>
+        <!-- ✅ CART OPENS NEW PAGE -->
+        <a href="cart.html">
+            Cart (<span id="cart-count">0</span>)
+        </a>
+    </nav>
+</header>
+
+<!-- 🔹 CATEGORY BAR -->
+<section class="categories">
+    <button onclick="filterCategory('All')">All</button>
+    <button onclick="filterCategory('Smartphone')">Mobiles</button>
+    <button onclick="filterCategory('Laptop')">Laptops</button>
+    <button onclick="filterCategory('Accessories')">Accessories</button>
+    <button onclick="filterCategory('Camera')">Cameras</button>
+</section>
+
+<!-- 🔹 PRODUCTS GRID -->
+<section class="products" id="products">
+    <!-- Products loaded via JS -->
+</section>
+
+<!-- 🔹 PRODUCT DETAILS MODAL -->
+<div id="product-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+        <img id="modal-img" alt="Product Image">
+        <h2 id="modal-name"></h2>
+        <p id="modal-price"></p>
+        <p id="modal-category"></p>
+        <ul id="modal-specs"></ul>
+        <button onclick="addToCartFromModal()">Add to Cart</button>
+    </div>
+</div>
+
+<!-- 🔹 FOOTER -->
+<footer>
+    <p>&copy; 2026 Buy It | Flipkart-Style UI Demo</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
